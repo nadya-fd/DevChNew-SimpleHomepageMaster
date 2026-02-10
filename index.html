@@ -12,51 +12,99 @@
       sizes="96x96"
     />
     <link rel="stylesheet" href="styles.css" />
-
     <title>Simple Homepage - Alarado | devChallenges.io</title>
   </head>
   <body>
-    <header class="main-header">
-      <div class="logo"></div>
-      <nav class="main-nav"></nav>
-      <div class="theme-button"></div>
-      <div class="toggle-button"></div>
+    <header class="header">
+      <div class="logo">
+        <img
+          src="resources/logo-light.svg"
+          width="141px"
+          height="24px"
+          alt=""
+        />
+      </div>
+      <nav class="nav">
+        <ul class="nav_items">
+          <li class="nav_item">
+            <a class="highlight" href=""> About us</a>
+          </li>
+          <li class="nav_item">
+            <a href="">Product</a>
+          </li>
+          <li class="nav_item">
+            <a href="">Resource</a>
+          </li>
+          <li class="nav_item">
+            <a href="">Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="humburger-mobile-nav-button">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="theme-toggle">
+        <img class="moon-button" src="resources/Moon_fill_light.svg" alt="" />
+        <img class="sun-button" src="resources/Sun_fill_light.svg" alt="" />
+      </div>
     </header>
-    <nav class="mobile-nav"></nav>
-    <main>
-      <section class="mainContent"></section>
-      <sectuin class="imageContent"></sectuin>
+    <nav class="mobile-nav">
+      <button class="close-mobile-nav-button" type="button">
+        <img
+          src="resources/close-button.svg"
+          alt=""
+          width="30px"
+          height="30px"
+        />
+      </button>
+      <ul class="mobile-nav_items">
+        <li class="mobile-nav_item">
+          <a class="mobile-nav_item-link highlight" href=""> About us</a>
+        </li>
+        <li class="mobile-nav_item">
+          <a class="mobile-nav_item-link" href="">Product</a>
+        </li>
+        <li class="mobile-nav_item">
+          <a class="mobile-nav_item-link" href="mobile-nav_item-link"
+            >Resource</a
+          >
+        </li>
+        <li class="mobile-nav_item">
+          <a class="mobile-nav_item-link" href="mobile-nav_item-link"
+            >Contact</a
+          >
+        </li>
+      </ul>
+      <div class="mobile-theme-toggle">
+        <img class="moon-button" src="resources/Moon_fill_light.svg" alt="" />
+        <img class="sun-button" src="resources/Sun_fill_light.svg" alt="" />
+      </div>
+    </nav>
+    <main class="main-container">
+      <section class="main-content">
+        <div class="pre-title">😎 Simple way to communicate</div>
+        <div class="title">Actions for Accessibility in Design</div>
+        <div class="text">
+          The fastest way to build and deploy websites with reusable components.
+        </div>
+        <div class="buttons">
+          <button class="start-button">Get Started</button>
+          <a class="demo-button" href="">Get live demo</a>
+        </div>
+        <div class="links">
+          <a class="creditCard-button" href="">No credit card required</a>
+          <a class="softwareInstall-button" href="">No software to install</a>
+        </div>
+      </section>
+      <section class="main-image">
+        <img
+          class="hero-image"
+          src="resources/hero-image-simple-homepage.png"
+          alt=""
+        />
+      </section>
     </main>
-    <!-- 
-    About us
-
-    Product
-
-    Resource
-
-    Contact
-
-    😎 Simple way to communicate
-
-    Actions for Accessibility in Design
-
-    The fastest way to build and deploy websites with resusable components.
-
-    Get Started
-
-    Get live demo
-
-    No credit card required
-
-    No software to install
-
-    -->
-
-    <div class="author-info">
-      Coded by <a href="#">Your Name Here</a> | Challenge by
-      <a href="https://www.devchallenges.io?ref=challenge" target="_blank"
-        >devChallenges.io</a
-      >.
-    </div>
   </body>
 </html>

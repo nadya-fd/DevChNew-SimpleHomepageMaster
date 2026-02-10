@@ -3,7 +3,294 @@
   padding: 0;
   box-sizing: border-box;
 }
+:root {
+  --bg-color-light: #f2f9fe;
+  --bg-color-dark: #111729;
+  --bg-color-dark2: #223344;
+  --font-color-dark: #223344;
+  --font-color-light: #f2f9fe;
+  --hightlight-color: #2a4dd0;
+  --font-color-gray: #909193;
+}
+
+@font-face {
+  font-family: 'Poppins-Medium';
+  src: url('resources/fonts/Poppins-Medium.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-SemiBold';
+  src: url('resources/fonts/Poppins-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url('resources/fonts/Poppins-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Sora-SemiBold';
+  src: url('resources/fonts/Sora-SemiBold.ttf') format('truetype');
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
 body {
-  height: 100vh;
+  margin: 28px 72px 98px;
+  background-color: var(--bg-color-light);
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 92px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.theme-toggle {
+  display: flex;
+}
+
+.mobile-theme-toggle {
+  /* display: none; if mobile navigation is CLOSED */
+  display: none;
+}
+
+.theme-toggle,
+.mobile-theme-toggle {
+  gap: 4px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--bg-color-dark2);
+  border-style: none;
+  border-radius: 16px;
+  padding: 2px;
+}
+
+.sun-button {
+  background-color: var(--bg-color-light);
+  border-radius: 16px;
+  width: 20px;
+  height: 20px;
+}
+
+.sun-button,
+.moon-button {
+  cursor: pointer;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Poppins-SemiBold', serif;
+  font-size: 14px;
+  color: var(--font-color-dark);
+}
+
+.nav ul {
+  /* font-family: 'Poppins-SemiBold', 'serif';
+  font-size: 14px; */
+  display: flex;
+  gap: 40px;
+}
+
+.nav_item a {
+  color: var(--font-color-dark);
+}
+
+.humburger-mobile-nav-button {
+  display: none;
+  width: 22px;
+  height: 17px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.humburger-mobile-nav-button span {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: #223344;
+  border-radius: 4px;
+}
+
+.close-mobile-nav-button {
+  align-self: flex-end;
+  border: none;
+  background-color: transparent;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.mobile-nav {
+  /* display: none; if mobile navigation is CLOSED */
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 65%;
+  height: 100%;
+  align-items: center;
+  background-color: white;
+  font-size: 32px;
+  font-family: 'Poppins-SemiBold', serif;
+  color: #909193;
+  row-gap: 60px;
+}
+
+.mobile-nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  row-gap: 40px;
+  align-items: center;
+}
+
+.mobile-nav_item-link {
+  color: var(--font-color-gray);
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap-reverse;
+}
+
+section {
+  flex: 1 1 424px;
+}
+
+.main-content {
+  max-width: 587px;
+  min-width: 424pxpx;
+}
+
+.main-image {
+  min-width: 428px;
+}
+
+.pre-title {
+  font-size: 14px;
+  font-family: 'Poppins-SemiBold', 'serif';
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.title {
+  font-size: 64px;
+  font-family: 'Poppins-Bold', 'serif';
+  margin-bottom: 32px;
+  letter-spacing: -0.64px;
+  line-height: 1.5;
+}
+
+.text {
+  font-size: 18px;
+  font-family: 'Poppins-Medium', 'serif';
+  margin-bottom: 22px;
+  /* max-width: 587px; */
+}
+
+.buttons,
+.links {
+  display: flex;
+  align-items: center;
+}
+
+.buttons {
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.links {
+  font-size: 14px;
+  font-family: 'Poppins-Medium', serif;
+  gap: 25px;
+}
+
+.start-button {
+  padding: 16px 32px;
+  background-color: var(--hightlight-color);
+  border-radius: 12px;
+  border: none;
+  text-transform: uppercase;
+  font-family: 'Sora-SemiBold', serif;
+  font-size: 16px;
+  color: white;
+}
+
+.demo-button {
+  color: #263fa9;
+  font-family: 'Poppins-SemiBold', serif;
+  font-size: 16px;
+  text-decoration-line: underline;
+  text-underline-offset: 7px;
+  text-decoration-thickness: 3px;
+}
+
+.creditCard-button,
+.softwareInstall-button {
+  background-image: url('resources/Done_ring_round_fill_green.svg');
+  background-repeat: no-repeat;
+  padding-left: 30px;
+}
+
+.highlight,
+.nav_item a.highlight {
+  color: var(--hightlight-color);
+  text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+@media (max-width: 640px) {
+  body {
+    margin: 20px 17px 16px 12px;
+  }
+  main {
+    justify-content: center;
+  }
+  .main-image {
+    max-width: 274px;
+    margin-bottom: 32px;
+  }
+
+  header {
+    margin-bottom: 32px;
+  }
+
+  .theme-toggle {
+    display: none;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .humburger-mobile-nav-button {
+    display: flex;
+  }
+
+  .title {
+    font-size: 40px;
+  }
 }
