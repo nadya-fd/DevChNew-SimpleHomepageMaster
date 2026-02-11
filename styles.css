@@ -62,6 +62,7 @@ img {
 
 .theme-toggle {
   display: flex;
+  cursor: pointer;
 }
 
 .mobile-theme-toggle {
@@ -87,9 +88,20 @@ img {
   height: 20px;
 }
 
-.sun-button,
-.moon-button {
-  cursor: pointer;
+.moon-button,
+.sun-button {
+  transform: translateX(0);
+  transition: transform 0.5s;
+}
+
+.darkModeSun {
+  transform: translateX(-27px);
+  transition: transform 0.5s;
+}
+
+.darkModeMoon {
+  transform: translateX(25px);
+  transition: transform 0.5s;
 }
 
 .nav {
@@ -107,7 +119,7 @@ img {
   gap: 40px;
 }
 
-.nav_item a {
+.nav-item a {
   color: var(--font-color-dark);
 }
 
@@ -164,7 +176,7 @@ img {
   align-items: center;
 }
 
-.mobile-nav_item-link {
+.mobile-nav-item-link {
   color: var(--font-color-gray);
 }
 
@@ -292,5 +304,12 @@ section {
 
   .title {
     font-size: 40px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #000000;
+    --text-color: #ffffff;
   }
 }
