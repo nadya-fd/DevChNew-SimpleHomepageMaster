@@ -342,8 +342,12 @@ section {
     justify-content: center;
   }
   .main-image {
-    max-width: 274px;
     margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+  }
+  .hero-image {
+    max-width: 278px;
   }
 
   header {
